@@ -31,7 +31,7 @@ htmlCode = "";
 // create a "for" loop to iterate over the caption array
 for (let i = 0; i < captions.length; i++) {
       htmlCode = "<figure>";
-      htmlCode = "<img alt='' src='slidei.jpg' />";
+      htmlCode = "<img alt='' src='slide[i].jpg' />";
       htmlCode = "<figcaption>caption[i]</figcaption>";
       htmlCode = "</figure>";
 }
