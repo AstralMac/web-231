@@ -70,7 +70,7 @@ function showGames() {
         if (gameInnings [i] < 5) {
             gameInfo += "[" + gameInnings[i]+"]***";
         } else if (gameInnings[i] < 9){
-            gameInfo +="[" + gameInnings[i]+"]*";
+            gameInfo += "[" + gameInnings[i]+"]*";
         } else if (gameInnings[i] > 9) {
             gameInfo += " [" + gameInnings[i] + "]";
         }
