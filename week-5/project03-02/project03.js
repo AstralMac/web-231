@@ -25,16 +25,20 @@ captions[11]="The International Space Station second expansion [2006]";
 captions[12]="The International Space Station third expansion [2007]";
 captions[13]="The ISS over the Ionian Sea [2007]";
 
-//Declare htmlCode variable with an initial value being and empty string
-htmlCode = "";
 
-// create a "for" loop to iterate over the caption array
+// Initialize htmlCode variable with an empty string
+let htmlCode = '';
+
+// Iterate through the captions array
 for (let i = 0; i < captions.length; i++) {
-      htmlCode = "<figure>";
-      htmlCode = "<img alt='' src='slide[i].jpg' />";
-      htmlCode = "<figcaption>caption[i]</figcaption>";
-      htmlCode = "</figure>";
+    // Add HTML code for each caption to the htmlCode variable
+    htmlCode += `
+        <figure>
+            <img alt='' src='slide${i}.jpg' />
+            <figcaption>${captions[i]}</figcaption>
+        </figure>
+    `;
 }
 
-// Change the inner HTML of the document element with id "gallery" to the value of the htmlCode variable
+// Change the inner HTML of the element with id "gallery"
 document.getElementById("gallery").innerHTML = htmlCode;
